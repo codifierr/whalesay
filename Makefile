@@ -11,7 +11,7 @@ build-whalesay:
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
 		--tag $(IMAGE-PREFIX)/whalesay:latest \
-		rsocket/.
+		.
 
 .PHONY: publish-whalesay
 publish-whalesay:
@@ -20,7 +20,7 @@ publish-whalesay:
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
 		--tag $(IMAGE-PREFIX)/whalesay:latest \
-		rsocket/.
+		.
 
 .PHONY: buildall
 buildall: build-whalesay
